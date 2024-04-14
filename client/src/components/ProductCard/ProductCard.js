@@ -12,22 +12,22 @@ function ProductCard({ product }) {
       <CardMedia 
         component="img"
         height="150"
-        image={product.image}
-        alt={product.title}
+        image={"https://" + product.imageUrl}
+        alt={product.name}
         sx={{ objectFit: 'contain' }}
       />
 
       <CardContent>
 
         <Typography gutterBottom variant="h6" component="div">
-          {product.title}
+          {product.name}
         </Typography>
 
-        <Rating name="read-only" value={product.rating.rate} readOnly />
+        <Rating name="read-only" value={product.rating} readOnly />
 
         <br />
 
-        <Chip color="primary" icon={<EuroIcon />} label={product.price.toFixed(2)} />
+        <Chip color="primary" icon={<EuroIcon fontSize="small" />} label={product.price.current.value.toFixed(2)} />
       
       </CardContent>
 
