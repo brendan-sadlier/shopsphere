@@ -9,8 +9,8 @@ app.use(cors());
 
 // app.use('/api', ProductRoutes);
 
-const PORT = process.env.PORT || 5000;
-const MONGO_URI = process.env.MONGO_URI;
+const PORT = 5000;
+const MONGO_URI = "mongodb://mongodb:27017/shopsphere";
 
 mongoose.connect(MONGO_URI, {})
         .then(() => {
